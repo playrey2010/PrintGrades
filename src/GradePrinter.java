@@ -34,11 +34,14 @@ public class GradePrinter {
                 grade = "D";
             }
 
-            if (!(score < 60)) {
+            if (score > 60 && score <= 100) {
                 System.out.println("Good job. Your grade is " + grade + ".");
-                System.out.println("Do you want to enter another score?");
+                System.out.println("Do you want to enter another score (Y/N)?");
                 again = sc.next();
-            } else if (score<60) {
+            } else if (score > 100) {
+                System.out.println("Were bonuses allowed? Or did you cheat? ");
+            }
+            else {
                 System.out.println("Go back to school.");
                 System.out.println("Do you want to enter another score (Y/N)?");
                 again = sc.next();
